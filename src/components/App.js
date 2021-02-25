@@ -6,12 +6,10 @@ function App() {
   return (
     <div className="App bg-gray-600 ">
       <Nav />
-      <div className="home px-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="home grid grid-cols-1 sm:grid-cols-2">
          <Movies />
          <Shows />
       </div>
-     
-     <h1>Hello</h1>
     </div>
   );
 }

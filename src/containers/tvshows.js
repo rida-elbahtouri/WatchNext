@@ -19,7 +19,7 @@ class shows extends React.Component {
 
 
        return (
-            <div>
+            <div className="bg-gray-800 p-4">
             <h1 className="grid-span-full text-2xl text-gray-50 my-2" >Tv Shows</h1>
             <div className="grid gap-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 ">
             {this.displayShows()}
