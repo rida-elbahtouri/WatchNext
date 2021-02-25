@@ -1,5 +1,6 @@
 import {connect} from "react-redux";
 import {getMovies} from "../actions"
+import MCard from "../components/MCard"
 import React from "react"
 
 class movies extends React.Component {
@@ -8,7 +9,11 @@ class movies extends React.Component {
         this.props.getMovies()
     }
     getmovies(){
-        console.log(this.props.Movies)
+       console.log(this.props.Movies)
+       const result = this.props.Movies.map(movie=>(
+           <MCard obj={movie} />
+         ))
+         return result
     }
     render() {
 
