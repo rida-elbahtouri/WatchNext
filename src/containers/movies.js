@@ -9,8 +9,8 @@ class movies extends React.Component {
         this.props.getMovies()
     }
     getmovies(){
-       console.log(this.props.Movies)
-       const result = this.props.Movies.map(movie=>(
+      const Movies = this.props.Movies.slice(0, 8)
+       const result = Movies.map(movie=>(
            <MCard obj={movie} />
          ))
          return result
@@ -19,15 +19,12 @@ class movies extends React.Component {
 
 
        return (
-        <div>
+            <div className="col-span-3">
+            <h1 className="grid-span-full" >Movies</h1>
+            <div className="grid gap-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 ">
             {this.getmovies()}
-            <h1>
-                title
-            </h1>
-            <p>
-                desc
-            </p>
-        </div>
+            </div>
+            </div>
     )  
     }
    
