@@ -9,4 +9,11 @@ export const getMovies = ()=>{
     }
 
 }
+export const getShows= ()=>{
 
+    return async (dispatch)=>{
+        const res=await Api.get(`tv/popular?api_key=${API_KEY}`)
+        dispatch({type:'Shows',payload:res.data.results})
+    }
+
+}

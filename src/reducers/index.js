@@ -8,7 +8,16 @@ const MoviesReducer=(state=[],action)=>{
             return state
     }
 }
+const ShowsReducer=(state=[],action)=>{
+    switch (action.type){
+        case 'Shows':
+            return action.payload
+        default:
+            return state
+    }
+}
 
 export default combineReducers({
     Movies:MoviesReducer,
+    Shows:ShowsReducer
 })

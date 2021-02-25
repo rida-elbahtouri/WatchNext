@@ -4,10 +4,10 @@ const MCard=(props)=> {
 console.log(props)
 const movie = props.obj
     return (
-        <div className="relative rounded-lg hover:shadow-blue hover:bg-blue-400"> 
+        <div className="relative rounded-lg  cursor-pointer hover:shadow-blue hover:shadow-blue hover:bg-blue-400"> 
              <img className="rounded-t-lg" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
              <div className="p-2">
-             <h1 className="text-white text-lg capitalize font-bold">{movie.title} </h1>  
+             <h1 className="text-white h-14 text-lg capitalize font-bold">{props.name.slice(0,20)} </h1>  
             <p className="text-gray-100">{movie.overview.slice(0,80)}... </p>  
             </div>
             <span className="absolute bg-gray-600 bg-opacity-50 px-2 py-1 top-4 left-0 rounded-r-lg text-gray-50"><FontAwesomeIcon icon={faStar} /> {movie.vote_average}</span> 
