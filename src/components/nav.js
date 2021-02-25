@@ -1,9 +1,9 @@
 import "../index.css"
 const Nav =()=>{
 return (
-    <nav className="bg-black py-5 p-4 flex justify-between">
-    <div>
-    <h1 className="text-xl font-bold text-gray-200">WATCHNEXT</h1>
+    <nav className="bg-black py-5 p-4 flex align-middle box-border justify-between">
+    <div className="flex align-middle h-8">
+    <h1 className="text-xl m-0 font-bold text-gray-200  h-8">WATCHNEXT</h1>
     </div>
     <div className="flex align-middle box-border ring-1 ring-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 bg-gray-600">
         <input className="bg-gray-800 rounded-l-lg box-border w-64 focus:outline-none  p-2 text-white  text-lg h-10" type="text" />
