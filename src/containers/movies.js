@@ -20,7 +20,7 @@ class movies extends React.Component {
 
        return (
             <div className="col-span-3">
-            <h1 className="grid-span-full" >Movies</h1>
+            <h1 className="grid-span-full text-lg text-gray-50 my-2" >Movies</h1>
             <div className="grid gap-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 ">
             {this.getmovies()}
             </div>
