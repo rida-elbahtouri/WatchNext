@@ -9,8 +9,8 @@ import {
 import Nav from "./nav"
 import Movies from "../containers/movies"
 import Shows from "../containers/tvshows"
-import Movie from "./Movie"
-import TvShow from "./TvShow"
+import Movie from "../containers/Movie"
+import TvShow from "../containers/TvShow"
 import Search from "./Search"
 
 

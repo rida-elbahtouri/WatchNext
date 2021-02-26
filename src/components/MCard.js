@@ -1,8 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-regular-svg-icons'
+import { Link } from "react-router-dom";
+
 const MCard=(props)=> {
-console.log(props)
+
 const movie = props.obj
+const {stype}= props
 const checkname=(name)=>{
     if(name.length >20){
         return `${name.slice(0,20)}...`
@@ -11,6 +14,8 @@ const checkname=(name)=>{
     }
 }
     return (
+       
+            <Link to={`${stype}/${movie.id}`}>
         <div className="relative rounded-lg  cursor-pointer hover:shadow-blue hover:shadow-blue hover:bg-blue-400"> 
              <img className="rounded-t-lg" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
              <div className="p-2">
@@ -19,6 +24,8 @@ const checkname=(name)=>{
             </div>
             <span className="absolute bg-gray-600 bg-opacity-50 px-2 py-1 top-4 left-0 rounded-r-lg text-gray-50"><FontAwesomeIcon icon={faStar} /> {movie.vote_average}</span> 
         </div>
+        </Link>
+      
     )
 }
 export default MCard;

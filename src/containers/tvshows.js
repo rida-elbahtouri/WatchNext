@@ -11,7 +11,7 @@ class shows extends React.Component {
     displayShows(){
       const Shows = this.props.Shows.slice(0, 8)
        const result = Shows.map(s=>(
-           <MCard name={s.name} obj={s} />
+           <MCard stype="tvshow" name={s.name} obj={s} />
          ))
          return result
     }

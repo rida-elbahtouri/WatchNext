@@ -24,3 +24,9 @@ export const getMovieDet = (id) =>{
         dispatch({type:'Movie',payload:res.data})
     }
 }
+export const getTvShowDet= (id) =>{
+    return async (dispatch)=>{
+        const res=await Api.get(`tv/${id}?api_key=${API_KEY}`)
+        dispatch({type:'TvShow',payload:res.data})
+    }
+}
