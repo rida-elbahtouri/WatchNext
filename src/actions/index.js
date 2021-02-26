@@ -17,3 +17,10 @@ export const getShows= ()=>{
     }
 
 }
+
+export const getMovieDet = (id) =>{
+    return async (dispatch)=>{
+        const res=await Api.get(`movie/${id}?api_key=${API_KEY}`)
+        dispatch({type:'Movie',payload:res.data})
+    }
+}
