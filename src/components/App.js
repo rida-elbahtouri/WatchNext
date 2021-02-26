@@ -1,8 +1,7 @@
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 
@@ -17,9 +16,9 @@ import Search from "./Search"
 function App() {
   return (
     <div className="App bg-gray-600 ">
-      <Nav />
+   
       <Router>
-      
+         <Nav />
       <Switch>
           <Route exact path="/">
             <div className="home grid grid-cols-1 sm:grid-cols-2">

@@ -1,5 +1,5 @@
 import {useParams} from 'react-router-dom'
-import {useState ,useEffect} from "react"
+import {useEffect} from "react"
 import {connect} from "react-redux";
 
 
@@ -9,7 +9,7 @@ const  Movie=(props)=> {
 
     let { id } = useParams();
     useEffect(() => props.getMovieDet(id), []);
-    
+
     const renderMovie=(m)=> {
         if(m.title){
             return (
