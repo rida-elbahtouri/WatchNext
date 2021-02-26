@@ -15,7 +15,7 @@ const checkname=(name)=>{
 }
     return (
        
-            <Link to={`${stype}/${movie.id}`}>
+            <Link to={`/${stype}/${movie.id}`}>
         <div className="relative rounded-lg  cursor-pointer hover:shadow-blue hover:shadow-blue hover:bg-blue-400"> 
              <img className="rounded-t-lg" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
              <div className="p-2">

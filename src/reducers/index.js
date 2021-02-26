@@ -32,9 +32,18 @@ const TvShowReducer=(state=[],action)=>{
             return state
     }
 }
+const SearchReducer=(state=[],action)=>{
+    switch (action.type){
+        case 'Search':
+            return action.payload
+        default:
+            return state
+    }
+}
 export default combineReducers({
     Movies:MoviesReducer,
     Shows:ShowsReducer,
     Movie:MovieReducer,
-    TvShow:TvShowReducer
+    TvShow:TvShowReducer,
+    SearchResult:SearchReducer
 })

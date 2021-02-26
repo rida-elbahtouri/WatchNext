@@ -10,12 +10,12 @@ import Movies from "../containers/movies"
 import Shows from "../containers/tvshows"
 import Movie from "../containers/Movie"
 import TvShow from "../containers/TvShow"
-import Search from "./Search"
+import Search from "../containers/Search"
 
 
 function App() {
   return (
-    <div className="App bg-gray-600 ">
+    <div className="App bg-gray-800 ">
    
       <Router>
          <Nav />
