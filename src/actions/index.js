@@ -17,3 +17,22 @@ export const getShows= ()=>{
     }
 
 }
+
+export const getMovieDet = (id) =>{
+    return async (dispatch)=>{
+        const res=await Api.get(`movie/${id}?api_key=${API_KEY}`)
+        dispatch({type:'Movie',payload:res.data})
+    }
+}
+export const getTvShowDet= (id) =>{
+    return async (dispatch)=>{
+        const res=await Api.get(`tv/${id}?api_key=${API_KEY}`)
+        dispatch({type:'TvShow',payload:res.data})
+    }
+}
+export const searchFor=(term)=>{
+    return async (dispatch)=>{
+        const res=await Api.get(`search/multi?api_key=${API_KEY}&query=${term}`)
+        dispatch({type:'Search',payload:res.data.results})
+    }
+}
