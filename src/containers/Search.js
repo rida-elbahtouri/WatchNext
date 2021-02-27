@@ -1,6 +1,6 @@
 
 import {useParams} from 'react-router-dom'
-import {useEffect} from "react"
+import {useEffect,useState} from "react"
 import {connect} from "react-redux";
 
 import MCard from "../components/MCard"
@@ -11,9 +11,13 @@ import {searchFor} from "../actions"
 const  Search=(props)=> {
 
     let { term } = useParams();
-   
-    useEffect(() =>  props.searchFor(term), []);
-    console.log(props.result)
+    const [termstate,setTerm] = useState(term)
+    useEffect(() =>  props.searchFor(termstate), []);
+    console.log(termstate)
+    if(term !== termstate) {
+        props.searchFor(term)
+        setTerm(term)
+    }
     
     const renderSearch=(list)=> {
         if(list.length !=0){
