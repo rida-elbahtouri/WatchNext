@@ -34,7 +34,7 @@ const  Search=(props)=> {
         }
     }
     return (
-        <div> 
+        <div className="grid gap-2 p-2 grid-cols-1 md:grid-cols-3  lg:grid-cols-6"> 
     {renderSearch(props.result)}         
         </div>
     )

@@ -13,11 +13,21 @@ const checkname=(name)=>{
         return name
     }
 }
+const checkImg =(url)=>{
+    if(url){
+        return `https://image.tmdb.org/t/p/w500${url}`
+    }else {
+        return 'https://via.placeholder.com/300x450.png?text=No+Photo'
+    }
+
+}
+
     return (
        
             <Link to={`/${stype}/${movie.id}`}>
         <div className="relative rounded-lg  cursor-pointer hover:shadow-blue hover:shadow-blue hover:bg-blue-400"> 
-             <img className="rounded-t-lg" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+            
+             <img className="rounded-t-lg w-full" src={checkImg(movie.poster_path)} alt={movie.title} />
              <div className="p-2">
              <h1 className="text-white text-lg capitalize font-bold">{checkname(props.name)} </h1>  
             <p className="text-gray-100">{movie.overview.slice(0,80)}... </p>  
