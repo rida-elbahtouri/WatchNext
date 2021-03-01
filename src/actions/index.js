@@ -36,3 +36,9 @@ export const searchFor=(term)=>{
         dispatch({type:'Search',payload:res.data.results})
     }
 }
+export const getReviews=(mtype,id)=>{
+    return async (dispatch)=>{
+        const res=await Api.get(`${mtype}/${id}/reviews?api_key=${API_KEY}`)
+        dispatch({type:'Reviews',payload:res.data.results})
+    }
+}
