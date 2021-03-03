@@ -21,6 +21,19 @@ const  Movie=(props)=> {
             )
         }
     }
+    const checkImg =(url)=>{
+        if(!url){
+            return 'https://via.placeholder.com/150x150.png?text=No+Photo'
+            
+        }else if(url.includes("https://") ){
+            return url.slice(1, -1)
+        }
+
+        else {
+            return `https://image.tmdb.org/t/p/w500${url}`
+        }
+    
+    }
     const renderifexistrating = (rt)=>{
         if(rt){
             return (<span className="text-md text-gray-400  bg-opacity-50 px-2 py-1" ><FontAwesomeIcon icon={faStar} />  {rt}</span>)
@@ -30,12 +43,14 @@ const  Movie=(props)=> {
         
         if(r.length > 0){
            const result = r.map(r=>(
-                <div key={r.id}>
+                <div className="flex" key={r.id}>
+                    <img className="rounded-full  w-14" src={checkImg(r.author_details.avatar_path)} alt={r.author} />
+                    <div className="ml-2">
                     <h2 className="text-lg text-gray-200">
                          {r.author} 
                           {renderifexistrating(r.author_details.rating)} 
                          </h2>
-                    
+                    </div>
                      </div>
             ))
             return result;
