@@ -3,6 +3,7 @@ import { faStar } from '@fortawesome/free-regular-svg-icons'
 const details=(props)=> {
     const {m,name,release_date} = props;
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    
     return (
         <div className="text-center mx-auto p-5 max-w-6xl">
         <h1 className="text-white text-2xl py-2 capitalize font-bold"> {name} </h1>

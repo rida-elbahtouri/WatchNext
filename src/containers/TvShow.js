@@ -3,15 +3,20 @@ import {useEffect} from "react"
 import {connect} from "react-redux";
 
 
-import {getTvShowDet} from "../actions"
+import {getTvShowDet,getReviews} from "../actions"
 import Details from '../components/details'
-
+import Reviews from "../components/reviews"
 
 const  TvShow=(props)=> {
 
     let { id } = useParams();
    
-    useEffect(() =>  props.getTvShowDet(id), []);
+    useEffect(() => {
+       props.getTvShowDet(id) 
+       props.getReviews("tv",id)
+    }
+    
+    , []);
     
     
     const renderTvShow=(m)=> {
@@ -21,17 +26,36 @@ const  TvShow=(props)=> {
             )
         }
     }
+    const renderReviews = (r) =>{
+        
+        if(r.length > 0){
+           const result = r.map(r=>(
+              <Reviews key={r.id} review={r} />
+            ))
+            return result;
+        }
+        else{
+            return (<p className="text-gray-100 text-lg" > No reviews yet</p>)
+        }
+        
+    }
+
     return (
         <div> 
-    {renderTvShow(props.TvShow)}         
+    {renderTvShow(props.TvShow)}       
+    <div className="max-w-6xl rounded-md border border-gray-100 p-7 m-auto">
+        <h1 className="text-gray-100 text-xl mb-4">Reviews</h1>
+        {renderReviews(props.reviews)}
+    </div>  
         </div>
     )
 }
 const mapStateToProps=(state)=>{
     return{
-        TvShow:state.TvShow
+        TvShow:state.TvShow,
+        reviews:state.Reviews
     }
 }
 
-export default connect(mapStateToProps,{getTvShowDet})(TvShow)
+export default connect(mapStateToProps,{getTvShowDet,getReviews})(TvShow)
 

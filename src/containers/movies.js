@@ -11,7 +11,7 @@ class movies extends React.Component {
     getmovies(){
       const Movies = this.props.Movies.slice(0, 8)
        const result = Movies.map(movie=>(
-           <MCard stype="movie" name = {movie.title} obj={movie} />
+           <MCard key={movie.id} stype="movie" name = {movie.title} obj={movie} />
          ))
          return result
     }
