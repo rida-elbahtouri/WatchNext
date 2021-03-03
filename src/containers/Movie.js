@@ -43,13 +43,16 @@ const  Movie=(props)=> {
         
         if(r.length > 0){
            const result = r.map(r=>(
-                <div className="flex" key={r.id}>
+                <div className="flex border border-gray-500 p-2 my-2 rounded-md" key={r.id}>
                     <img className="rounded-full  w-14" src={checkImg(r.author_details.avatar_path)} alt={r.author} />
                     <div className="ml-2">
                     <h2 className="text-lg text-gray-200">
                          {r.author} 
                           {renderifexistrating(r.author_details.rating)} 
                          </h2>
+                         <p className="text-md text-gray-100">
+                             {r.content.slice(0,200)}
+                         </p>
                     </div>
                      </div>
             ))
@@ -64,7 +67,10 @@ const  Movie=(props)=> {
     return (
         <div> 
     {renderMovie(props.Movie)}       
+    <div className="max-w-4xl rounded-md border border-gray-100 p-7 m-auto">
+        <h1 className="text-gray-100 text-xl mb-4">Reviews</h1>
         {renderReviews(props.reviews)}
+    </div>
         </div>
     )
 }
