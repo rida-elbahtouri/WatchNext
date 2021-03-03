@@ -43,7 +43,7 @@ const  TvShow=(props)=> {
     return (
         <div> 
     {renderTvShow(props.TvShow)}       
-    <div className="max-w-4xl rounded-md border border-gray-100 p-7 m-auto">
+    <div className="max-w-6xl rounded-md border border-gray-100 p-7 m-auto">
         <h1 className="text-gray-100 text-xl mb-4">Reviews</h1>
         {renderReviews(props.reviews)}
     </div>  

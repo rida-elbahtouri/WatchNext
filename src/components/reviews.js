@@ -23,14 +23,14 @@ const reviews =(props)=> {
     }
     return (
         <div className="flex border border-gray-500 p-2 my-2 rounded-md" key={r.id}>
-        <img className="rounded-full  w-14" src={checkImg(r.author_details.avatar_path)} alt={r.author} />
+        <img className="rounded-full max-h-14  w-14" src={checkImg(r.author_details.avatar_path)} alt={r.author} />
         <div className="ml-2">
         <h2 className="text-lg text-gray-200">
              {r.author} 
               {renderifexistrating(r.author_details.rating)} 
              </h2>
              <p className="text-md text-gray-100">
-                 {r.content.slice(0,200)}
+                 {r.content}
              </p>
         </div>
          </div>
