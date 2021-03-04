@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# WatchNext
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React webapp that allows users to search for shows by name and then display a list of all the shows and users can see show details and see other people's reviews.
 
-## Available Scripts
+### Live Link
 
-In the project directory, you can run:
+[click here](not deployed yet)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### ScreenShot
 
-### `npm test`
+![screenshot](./src/assets/Images/Capture.PNG)
+![screenshot](./src/assets/Images/Capture2.PNG)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built With
 
-### `npm run build`
+- React
+- Redux
+- Tailwindcss
+- Thunk
+- JSX
+- CSS
+- JavaScript
+- ESLint
+- VS Code
+- NPM
+- Axios
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You must have a browser on your PC in order to use the application. [Click here](https://www.mozilla.org/en-US/firefox/new/) to download one.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+you must have [NodeJS](https://nodejs.org/en/)
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. clone the project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Clone this repository
+$ git https://github.com/rida-elbahtouri/WatchNext.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Go into the repository
+$ cd WatchNext
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**You can Install the dependencies with this commands**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+$ npm install
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### start the app
 
-### Analyzing the Bundle Size
+```bash
+$ npm  start
+ # and open the link provided
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### run Tests
 
-### Making a Progressive Web App
+```bash
+$ npm  test
+#Or
+$ npm run test
+ # and open the link provided
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Authors
 
-### Advanced Configuration
+👤 **Rida Elbahtouri**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [Github](https://github.com/rida-elbahtouri)
+- [Twitter](https://twitter.com/RElbahtouri)
+- [Linkedin](https://www.linkedin.com/in/rida-elbahtouri/)
 
-### Deployment
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions, issues and feature requests are welcome!
 
-### `npm run build` fails to minify
+Feel free to check the <a href="https://github.com/rida-elbahtouri/WatchNext/issues" target="_blank">issues page</a>.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- <a href="https://reactjs.org/" target="_blank">React js</a>
+- <a href="https://redux.js.org" target="_blank">Redux JS</a>
+- <a href="https://www.themoviedb.org/documentation/api" target="_blank">Themoviedb </a>(The Api Used to get data)
